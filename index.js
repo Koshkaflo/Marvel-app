@@ -82,7 +82,8 @@ function getCharacterModal(character) {
  * получим информацию о персонажах с API
  */
 function fetchCharacters() {
-    // TODO 1
+    let api = 'https://bravevillainousexponents.dbronskih.repl.co/characters';
+    return fetch(api).then(res => res.json());
 }
 
 /**
@@ -92,8 +93,12 @@ function fetchCharacters() {
  * @returns {Array}
  */
 function getCharacterCards(characters) {
-    // TODO 2
-    // characters.length - длина массива characters
+    let arr = [];
+    for (let i = 0; i < characters.length; i++) {
+        let character = characters[i];
+        arr.push(getCharacterCard(character));
+    }
+    return arr;
 }
 
 /**
