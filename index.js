@@ -101,6 +101,15 @@ function getCharacterCards(characters) {
     return arr;
 }
 
+/* alternative with map method
+function getCharacterCards(characters) {
+    return characters.map((el) => {
+       return getCharacterCard(el) 
+    });
+}
+*/
+
+
 /**
  * get character modals array
  *
@@ -116,3 +125,10 @@ function getCharacterModals(characters) {
     return arr;
 }
 
+/* alternative with map method
+function getCharacterModals(characters) {
+    return characters.map((el) => {
+       return getCharacterModal(el) 
+    });
+}
+*/
