@@ -1,5 +1,5 @@
 /**
- * Получить карточку персонажа
+ * get character card
  *
  * @param character
  * @returns {string}
@@ -30,7 +30,7 @@ function getCharacterCard(character) {
 }
 
 /**
- * Получить модальное окно персонажа
+ * get character modal
  *
  * @param character
  * @returns {string}
@@ -79,7 +79,7 @@ function getCharacterModal(character) {
 }
 
 /**
- * получим информацию о персонажах с API
+ * get data from API
  */
 function fetchCharacters() {
     let api = 'https://bravevillainousexponents.dbronskih.repl.co/characters';
@@ -87,7 +87,7 @@ function fetchCharacters() {
 }
 
 /**
- * Получить массив карточек персонажей
+ * get character cards array
  *
  * @param characters
  * @returns {Array}
@@ -102,11 +102,17 @@ function getCharacterCards(characters) {
 }
 
 /**
- * Получить массив модальных окон персонажей
+ * get character modals array
  *
  * @param characters
  * @returns {Array}
  */
 function getCharacterModals(characters) {
-    // TODO 3
+    let arr = [];
+    for (let i = 0; i < characters.length; i++) {
+        let character = characters[i];
+        arr.push(getCharacterModal(character));
+    }
+    return arr;
 }
+
